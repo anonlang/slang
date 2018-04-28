@@ -1,0 +1,2 @@
+# slang
+standard-language
