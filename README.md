@@ -1,4 +1,4 @@
-# slang
+ # slang
 Standard Language: Pluggable to match any modern or future language.
 
 ## Example
@@ -9,7 +9,10 @@ Standard Language: Pluggable to match any modern or future language.
 ## Parser
     app statement*
     statment type-block? line-comment?
-    type-block type type-input*
+    type-block type-meta* type type-input*
+    type-meta initialization-meta|visibility-meta
+    initialization-meta 'once'|'once-per-thread'
+    visibility-meta 'api'|'implementation'
     type [a-zA-Z_-][a-zA-Z0-9_-]+
     type-input number|text|type
     number [0-9]+
